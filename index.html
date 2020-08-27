@@ -1,0 +1,493 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Presentation | Dhruv</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+
+    <link rel="stylesheet" href="plugin/highlight/xt256.css" id="highlight-theme">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h3>Object Oriented Programming</h3>
+                <code style="padding-top: 5em;"><u>
+                    <a href="https://dhrv.pw/" target="_blank">~ Dhruv Suthar</a>
+                </u></code>
+            </section>
+            <section>
+                <section>
+                    <div class="pa4 tj">
+                        <p class="fw6 db">programming based on concept of <b>objects</b></p>
+                        <p class="fw6 db">objects contain <b>data</b> and <b>code</b></p>
+                        <p class="fw6 db">also called <b>class</b> based programming</p>
+                    </div>
+                </section>
+                <section>
+                    <div class="pa4 tj">
+                        <p class="fw6 db"><b>objects</b> -> real world <b>entities</b> </p>
+                        <p class="fw6 db"><b>objects</b> have properties and procedures </p>
+                    </div>
+                </section>
+                <section>
+                    <div class="pa4 tj">
+                        <p class="fw6 db"><b>data</b> -> properties or <b>attributes</b> </p>
+                    </div>
+                </section>
+                <section>
+                    <div class="pa4 tj">
+                        <p class="fw6 db"><b>code</b> -> procedures or <b>methods</b> </p>
+                    </div>
+                </section>
+                <section>
+                    <div class="pa4 tj">
+                        <p class="fw6 db"><b>class</b> -> blueprint or <b>structure</b> </p>
+                    </div>
+                </section>
+            </section>
+            <section>
+                <section>
+                    a real <b>example</b>
+                </section>
+                <section>
+                    <table>
+                        <tr>
+                            <td>
+                                Animal
+                            </td>
+                            <td>
+                                name of the animal
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Data
+                            </td>
+                            <td>
+                                information about animal
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Procedures
+                            </td>
+                            <td>
+                                things it can do
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+                <section>
+                    <table>
+                        <tr>
+                            <td>
+                                Cat
+                            </td>
+                            <td>
+                                Hope
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Breed
+                            </td>
+                            <td>
+                                Scottish Fold
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Color
+                            </td>
+                            <td>
+                                Black
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            </td>
+                            <td>
+                                Meow
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            </td>
+                            <td>
+                                Play
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+            </section>
+            <section>
+                <section>
+                    a real <b>code</b>
+                </section>
+                <section>
+                    <pre><code data-trim data-noescape>
+						# Class Definition 
+
+						class Cat:
+							def __init__(self, name, breed, color):
+								self.Name = name
+								self.Breed = breed
+								self.Color = color
+							
+							def Meow(self):
+								return f"{self.Name} Meows!"
+							
+							def Play(self, toy):
+								return f"{self.Name} Plays with {toy}!"
+						
+					</code></pre>
+                </section>
+                <section>
+                    let's implement
+                </section>
+                <section>
+                    <pre><code data-trim data-noescape>
+						>>> # Object Initialization and More
+						>>>
+						>>> Hope = Cat("Hope", "Scottish Fold", "Black")
+						>>> Hope.Name
+						'Hope'
+						>>> Hope.Breed
+						'Scottish Fold'
+						>>> Hope.Color
+						'Black'
+						>>> Hope.Meow()
+						'Hope Meows!'
+						>>> Hope.Play("mouse")
+						'Hope Plays with mouse!'
+						>>> |					
+					</code></pre>
+                </section>
+            </section>
+            <section>
+                <section>
+                    class
+                </section>
+                <section>
+                    a class is a blueprint for the object
+                </section>
+                <section>
+                    <pre><code data-trim data-noescape>
+						class Cat():
+							pass
+					</code></pre>
+                </section>
+            </section>
+            <section>
+                <section>
+                    object
+                </section>
+                <section>
+                    an oject is an instantiation of a class
+                </section>
+                <section>
+                    <pre><code data-trim data-noescape>
+						Hope = Cat()
+					</code></pre>
+                </section>
+            </section>
+            <section>
+                <section>
+                    attributes
+                </section>
+                <section>
+                    attributes hold the data that defines an object
+                </section>
+                <section>
+                    <pre><code data-trim data-noescape>
+						>>> Hope = Cat("Hope", "Scottish Fold", "Black")
+						>>> Hope.Name
+						'Hope'
+					</code></pre>
+                </section>
+            </section>
+            <section>
+                <section>
+                    methods
+                </section>
+                <section>
+                    methods are functions defined inside the class
+                </section>
+                <section>
+                    methods tell an object what to do and how to do it
+                </section>
+                <section>
+                    <pre><code data-trim data-noescape>
+						def Meow(self):
+								return f"{self.Name} Meows!"
+					</code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim data-noescape>
+						>>> Hope.Meow()
+						Hope Meows!
+					</code></pre>
+                </section>
+            </section>
+            <section>
+                <section>
+                    four pillars of object oriented programming
+                </section>
+                <section>
+                    <div class="pa4 tj">
+                        <p class="fw6 db">Inheritance</p>
+                        <p class="fw6 db">Encapsulation</p>
+                        <p class="fw6 db">Polymorphism</p>
+                        <p class="fw6 db">Abstraction</p>
+                    </div>
+                </section>
+            </section>
+            <section>
+                <section>
+                    Inheritance
+                </section>
+                <section>
+                    <div class="pa4 tj">
+                        <p class="fw6 db">
+                            Inheritance is a way of creating a new class for using details of an existing class without modifying it.
+                        </p>
+                        <p class="fw6 db">
+                            The newly formed class is a derived class (or child class). Similarly, the existing class is a base class (or parent class).
+                        </p>
+                    </div>
+                </section>
+                <section>
+                    <pre><code data-trim data-noescape>
+						# Parent Class
+
+						class Parent:
+							def __init__(self):
+								self.parent_variable = "Parent Variable"
+								print("Parent Object Created")
+							
+							def ParentMethod(self):
+								return f"This is a Parent Method"
+							
+					</code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim data-noescape>
+						# Child Class
+
+						class Child(Parent):
+							def __init__(self):
+								super().__init__()
+								self.child_variable = "Child Variable"
+								print("Child Object Created")
+
+							def ParentMethod(self):
+								print("Inherited Method of Parent")
+							
+							def ChildMethod(self):
+								print("This is a Child Method")
+					</code></pre>
+                </section>
+                <section>
+                    let's implement
+                </section>
+                <section>
+                    <pre><code data-trim data-noescape>
+						>>> P = Parent()
+						'Parent Object Created'
+						>>> P.parent_variable
+						'Parent Variable'
+						>>> P.ParentMethod()
+						'This is a Parent Method'
+					</code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim data-noescape>
+						>>> C = Child()
+						'Child Object Created'
+						>>> C.child_variable
+						'Child Variable'
+						>>> C.ChildMethod()
+						'This is a Child Method'
+						>>> C.ParentMethod()
+						'Inherited Method of Parent'
+					</code></pre>
+                </section>
+            </section>
+            <section>
+                <section>
+                    Encapsulation
+                </section>
+                <section>
+                    <div class="pa4 tj">
+                        <p class="fw6 db">
+                            Encapsulation is a way to restrict access to methods and variables.
+                        </p>
+                        <p class="fw6 db">
+                            This prevents data from direct modification.
+                        </p>
+                    </div>
+                </section>
+                <section>
+                    <pre><code data-trim data-noescape>
+						class Product:
+
+						def __init__(self):
+							self.__price = 1000
+					
+						def Sell(self):
+							print("Selling Price: {}".format(self.__price))
+					
+						def setPrice(self, newprice):
+							self.__price = newprice
+					</code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim data-noescape>
+						>>> Diamond = Product()
+						>>> Diamond.Sell()
+						'Selling Price : 1000'
+						>>> Diamond.setPrice(2000)
+						>>> Diamond.Sell()
+						'Selling Price : 2000'
+					</code></pre>
+                </section>
+            </section>
+            <section>
+                <section>
+                    Polymorphism
+                </section>
+                <section>
+                    <div class="pa4 tj">
+                        <p class="fw6 db">
+                            Polymorphism is a way to use a common interface for multiple form (poly morph) of data.
+                        </p>
+                        <p class="fw6 db">
+                            The concept of polymorphism is to use the same method or operator for different kind of data.
+                        </p>
+                    </div>
+                </section>
+                <section>
+                    <pre><code data-trim data-noescape>
+                        class Cat:
+                            def Meow():
+                                print("Cat can Meow")
+                            def Fly():
+                                print("Cat cannot Fly")
+                        
+                        class Crow:
+                            def Meow():
+                                print("Crow cannot Meow")
+                            def Fly():
+                                print("Crow can Fly")
+                        
+                        def flyingTest(bird):
+                            bird.Fly()
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim data-noescape>
+                        >>> Tom = Cat()
+                        >>> Scare = Crow()
+                        >>> flyTest(Tom)
+                        'Cat cannot Fly'
+                        >>> flyTest(Scare)
+                        'Crow can Fly'
+                    </code></pre>
+                </section>
+            </section>
+            <section>
+                <section>
+                    Abstraction
+                </section>
+                <section>
+                    <div class="pa4 tj">
+                        <p class="fw6 db">
+                            Abstraction is way of hiding the complexity and only showing the essential features of the object.
+                        </p>
+                        <p class="fw6 db">
+                            It means hiding the real implementation of a object.
+                        </p>
+                    </div>
+                </section>
+                <section>
+                    <pre><code data-trim data-noescape>
+                        """ Circle Class """
+
+                        class Circle:
+                            pi = 3.14
+                            def __init__(self, radius):
+                                self.r = radius
+                            def Area(self):
+                                return(Circle.pi*self.radius*self.radius)
+
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim data-noescape>
+                        """ Area.py """
+
+                        from Circle import *
+
+                        c1 = Circle(10)
+                        print("Area Calculator")
+                        print("Area : " + str(c1.Area()))
+
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim data-noescape>
+                        Area Calculator
+                        Area : 314.0
+                    </code></pre>
+                </section>
+            </section>
+            <section>
+                <section>
+                    useful links
+                </section>
+                <section>
+                    <div class="pa4 tj">
+                        <p class="fw6 db">
+                            <a href="https://docs.python.org/3/tutorial/classes.html" target="_blank"><u>Official Python Documentation</u></a>
+                        </p>
+                        <p class="fw6 db">
+                            <a href="https://python-textbok.readthedocs.io/en/1.0/" target="_blank"><u>Python Reference Book</u></a>
+                        </p>
+                    </div>
+                </section>
+            </section>
+            <section>
+                Thanks
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/search/search.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealSearch, RevealZoom]
+        });
+    </script>
+</body>
+
+</html>
